@@ -1,0 +1,22 @@
+# for loging
+
+provider "aws" {
+
+        access_key = ""
+        secret_key = ""
+        region = "ap-south-1"
+
+}
+
+resource "aws_db_instance" "RDS" {
+        allocated_storage    = 10
+        db_name              = "mydb"
+        engine               = "mysql"
+        engine_version       = "5.7"
+        instance_class       = "db.t2.micro"
+        username             = "mydata"
+        password             = "yogesh123"
+        parameter_group_name = "default.mysql5.7"
+        skip_final_snapshot  = true
+}
+~   
